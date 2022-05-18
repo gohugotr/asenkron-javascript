@@ -1,4 +1,4 @@
-`REACT-APOLLO ve GRAPHQL ile Uygulamalar Geliştirelim [2021]`
+# `REACT-APOLLO ve GRAPHQL ile Uygulamalar Geliştirelim [2021]`
 
 ## Asenkron Javascript
 
