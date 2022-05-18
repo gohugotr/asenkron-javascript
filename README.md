@@ -38,3 +38,9 @@ getUsers((err,data)=>{
     }
 });
 ```
+
+```js script
+    // Veriler JSON olarak döndürüldü.
+    const data = JSON.parse(xhr.responseText); 
+    callback(undefined, data);
+```
