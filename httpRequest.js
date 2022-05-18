@@ -1,4 +1,4 @@
-const getUsers = (callback) => {
+const getUsers = (url, callback) => {
     const xhr = new XMLHttpRequest()
 
     xhr.addEventListener('readystatechange', () => {
@@ -18,11 +18,13 @@ const getUsers = (callback) => {
       }
     })
 
-    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+    xhr.open('GET', url);
     xhr.send();
 }
 
-getUsers((err,data)=>{
+const url = 'https://jsonplaceholder.typicode.com/users';
+
+getUsers(url, (err,data)=>{
     if(err){
         console.log(err);
     } else {
