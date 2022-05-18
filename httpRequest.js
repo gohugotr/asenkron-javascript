@@ -18,16 +18,32 @@ const getUsers = (url, callback) => {
       }
     })
 
-    xhr.open('GET', url);
+    xhr.open('GET', url)
     xhr.send();
 }
 
-const url = 'https://jsonplaceholder.typicode.com/users';
+const url = 'https://jsonplaceholder.typicode.com/users'
 
-getUsers(url, (err,data)=>{
+getUsers('users/bidb.json',(err,data)=>{
     if(err){
         console.log(err);
     } else {
-        console.log(data);
+
+        console.log('bidb.json verileri:/n', data);
+
+        getUsers('users/muhasebe.json', (err, data) => {
+          if (err) {
+            console.log(err)
+          } else {
+            console.log('muhasebe.json verileri:/n', data);
+            getUsers(url, (err, data) => {
+              if (err) {
+                console.log(err)
+              } else {
+                console.log('json placeholder sitesi users verileri:/n', data);
+              }
+            })
+          }
+        })
     }
 });
