@@ -110,6 +110,8 @@ getUsers('users/bidb.json',(err,data)=>{
 ```js script
 const veriGetir = () => {
    return new Promise((resolve,reject)=>{
+       // Promise içerisinde callback fonksiyonu ve bu fonksiyonda 
+       // resolve ve reject diye iki parametre bulunur.
         resolve('Veri başarıyla getirildi.');
         // resolve('Veri başarıyla getirildi');
         // Veri başarıyla getirildiyse reject çalışmaz.
