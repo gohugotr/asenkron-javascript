@@ -1,19 +1,19 @@
-const veriGetir = () => {
-  return new Promise((resolve, reject) => {
-    // resolve('Veri başarıyla getirildi');
-    // Veri başarıyla getirildiyse reject çalışmaz.
-    reject('Veri hatası')
-    // Veri hatalı geldiyse, burası çalışır.
-  })
-}
+// const veriGetir = () => {
+//   return new Promise((resolve, reject) => {
+//     // resolve('Veri başarıyla getirildi');
+//     // Veri başarıyla getirildiyse reject çalışmaz.
+//     reject('Veri hatası')
+//     // Veri hatalı geldiyse, burası çalışır.
+//   })
+// };
 
-veriGetir()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+// veriGetir()
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+// });
 
 // const getUsers = (url, callback) => {
 //     const xhr = new XMLHttpRequest()

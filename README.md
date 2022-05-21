@@ -123,5 +123,4 @@ veriGetir().then((data)=>{
 }).catch((err)=>{
     console.log(err);
 })
-
 ```
