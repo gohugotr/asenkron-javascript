@@ -50,9 +50,20 @@ const getUsers = (url) => {
 
 const url = 'https://jsonplaceholder.typicode.com/users';
 
-getUsers(url).then((data)=>{
-    console.log(data);
-}).catch((err)=>{
-    console.log(err);
-});
+// getUsers(url).then((data)=>{
+//     console.log(data);
+// }).catch((err)=>{
+//     console.log(err);
+// });
 
+//Promise zincirleri oluşturma
+getUsers(url).then((data) => {
+    console.log('jsonplaceholder uzak verileri', data);
+    return getUsers('/users/muhasebe.json');
+  })
+  .then((data) => {
+    console.log('muhasebe verileri', data);
+  })
+  .catch((err) => {
+    console.log(err)
+  })

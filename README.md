@@ -170,3 +170,24 @@ getUsers(url).then((data)=>{
     console.log(err);
 });
 ```
+
+### Promise zincirleri oluşturma
+
+```js script
+getUsers('https://jsonplaceholder.typicode.com/users').then((data) => {
+    console.log('jsonplaceholder uzak verileri', data);
+    return getUsers('/users/muhasebe.json');
+  })
+  .then((data) => {
+    console.log('muhasebe verileri', data);
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+```
+
+`Not:` ilk zincirde (jsonplaceholder uzak veri) hata olursa, ikinci zincir çalışmaz. catch bloğuna düşer.
+
+`console sonucu`
+
+<img src="2022-05-21-11-56-26.png" width="800">
