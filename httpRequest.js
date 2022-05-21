@@ -9,10 +9,10 @@ const veriGetir = () => {
 
 veriGetir()
   .then((data) => {
-    console.log(data)
+    console.log(data);
   })
   .catch((err) => {
-    console.log(err)
+    console.log(err);
   })
 
 // const getUsers = (url, callback) => {

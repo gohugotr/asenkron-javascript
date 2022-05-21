@@ -104,3 +104,24 @@ getUsers('users/bidb.json',(err,data)=>{
 `console sonucu`
 
 <img src="2022-05-18-22-52-10.png" width="800">
+
+### Promise yapısı
+
+```js script
+const veriGetir = () => {
+   return new Promise((resolve,reject)=>{
+        resolve('Veri başarıyla getirildi.');
+        // resolve('Veri başarıyla getirildi');
+        // Veri başarıyla getirildiyse reject çalışmaz.
+        reject('Veri hatası');
+        // Veri hatalı geldiyse, burası çalışır.
+   })
+};
+
+veriGetir().then((data)=>{
+    console.log(data);
+}).catch((err)=>{
+    console.log(err);
+})
+
+```
