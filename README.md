@@ -192,7 +192,6 @@ getUsers('https://jsonplaceholder.typicode.com/users').then((data) => {
 
 <img src="2022-05-21-11-56-26.png" width="800">
 
-
 ### fetch ile veri çekme
 
 ```js script
@@ -210,5 +209,31 @@ fetch(url).then((response)=>{
     return response.json();
 }).then((data)=>{
     console.log(data);
+});
+```
+
+### Async ve Await kullanımı
+
+```js script
+const getUsers = async () => {
+
+    const res = await fetch('users/bidb.json');
+
+    if (res.status !=200){
+        throw new Error('Veriye ulaşılamadı.')
+    }
+
+     const data  = await res.json();
+     return data;
+};
+
+getUsers().then((response) => {
+    
+    console.log(response);
+  
+}).catch(err=>{
+
+    console.log(err);
+
 });
 ```
