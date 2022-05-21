@@ -7,7 +7,7 @@ const getUsers = (url, callback) => {
         //console.log(xhr.responseText)
         const data = JSON.parse(xhr.responseText); // Veriler JSON olarak döndürüldü.
         callback(undefined, data);
-        // Standart kullanım ilk paramtre hata, 2. parametrede doğru verinin paramtresi şeklinde
+        // Standart kullanım ilk parametre hata, 2. parametrede doğru verinin parametresi şeklinde
             // İlk parametre burada hata olmayacağından 'undefined' oluyor.
             // 2. parametrede de veri içeren 'xhr.responseText' oluyor.
       } else if (xhr.readyState == 4) {
