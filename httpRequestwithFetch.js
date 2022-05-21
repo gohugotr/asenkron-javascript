@@ -1,5 +1,5 @@
 
-const url = 'https://jsonplaceholder.typicode.com/userss';
+const url = 'https://jsonplaceholder.typicode.com/users';
 
 // ilk adım
 // fetch(url).then((response)=>{
