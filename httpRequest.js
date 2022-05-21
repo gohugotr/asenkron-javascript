@@ -57,7 +57,7 @@ const url = 'https://jsonplaceholder.typicode.com/users';
 // });
 
 //Promise zincirleri oluşturma
-getUsers(url).then((data) => {
+getUsers('https://jsonplaceholder.typicode.com/users').then((data) => {
     console.log('jsonplaceholder uzak verileri', data);
     return getUsers('/users/muhasebe.json');
   })
